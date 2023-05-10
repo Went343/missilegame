@@ -1,0 +1,37 @@
+1. If the number of players exceeds the amount of spaces on the board - 1, then throw an error that the game has too many
+2. Before Game starts, choose a random starting point & update the board for each player. Spaces cannot overlap here. Does not require pthreads
+
+playerTurn () {
+
+	//This entire function is in a loop apart from code related to the pthreads
+
+	//First checks to see if the game is set to over via a global boolean controlled by the supervisor thread
+
+	//Randomly chooses a spot on the board
+	
+	//If occupied by opposing team OR nobody:
+		//If it is not a team's starting position:	
+			//Take that space for their team
+			//Check to see if they have majority of their 3x3 space (with the space they just conquered as the middle):
+				//If yes majority, take all spaces within the 3x3
+				//If no majority, do nothing
+		//If it is, do nothing
+		
+	//If it belongs to your own team:
+		//If it's a starting space, do nothing
+		//If it's not a starting space, make the space blank
+	
+	//Print the board
+	//Wait randomly 1, 2, or 3 seconds
+	
+}
+
+supervisor () {
+
+	//This entire function is in a loop apart from code related to the pthreads
+	
+	//Checks to see if the board is full:
+		//If no, then waits 1 second
+		//If yes, sets global boolean variable to false and quits
+
+}
